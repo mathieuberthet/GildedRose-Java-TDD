@@ -4,7 +4,6 @@ import java.util.List;
 
 public class GildedRose
 {
-
 	/*
 	 * The code below is intended to help writing test fixtures
 	 * 
@@ -25,7 +24,13 @@ public class GildedRose
 
 	public static void updateItem(Item item)
 	{
-		
+		item.setQuality(item.getQuality()-1);
+		item.setSellIn(item.getSellIn() -1);
+	}
+	
+	public static void qualityUpdateFast(Item item)
+	{
+		item.setQuality(item.getQuality()-2);
 	}
 
 }
